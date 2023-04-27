@@ -1,7 +1,3 @@
-const { readdirSync, mkdirSync, lstatSync, rmSync } = require("node:fs");
-const { join } = require("node:path");
-
-
 const ServersDir = join(__dirname, "..", "..", "..", "Servers")
 const config = require("../../../config.json");
 
@@ -19,8 +15,6 @@ function createNavItem(serverName, nav) {
     a.text = serverName;
     nav.appendChild(li);
 }
-
-console.log(files)
 
 for (var file of files) {
     if (!lstatSync(ServersDir + `/${file}`).isDirectory()) {

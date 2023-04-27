@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imports.js" defer></script>
     <script src="../js/horizontalScrolling.js" defer></script>
     <script src="../js/getServers.js" defer></script>
-    <title>Document</title>
+    <script src="../js/createServer.js" defer></script>
+    <title>Main</title>
 </head>
 <body>
     <header>
@@ -19,10 +21,16 @@
         </div>
     </header>
     <nav class="inline" id="H-Scroll">
-        <a>New Server</a>
+        <a id="createServer">New Server</a>
         <ul id="nav-ul">
         </ul>
     </nav>
-    <main></main>
+    <main>
+        <div id="createServerPanel">
+            <form action="createServer" method="POST">
+                <input type="text" id="serverName" placeholder="Server Name">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
