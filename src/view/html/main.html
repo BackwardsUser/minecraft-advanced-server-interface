@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <script src="../js/createServer.js" defer></script>
     <title>Main</title>
 </head>
+
 <body>
     <header>
         <h2>Backwards' MASI</h2>
@@ -26,11 +28,22 @@
         </ul>
     </nav>
     <main>
-        <div id="createServerPanel">
-            <form action="createServer" method="POST">
-                <input type="text" id="serverName" placeholder="Server Name">
+        <div id="createServerPanel" class="createServerPanel">
+            <form action="createServer" class="createServerForm" method="POST">
+                <h3>Create Server</h3>
+                <fieldset>
+                    <legend>Server Options</legend>
+                    <div class="inputs">
+                        <input type="text" placeholder="Server Name" required>
+                        <select name="Versions" id="versions" required>
+                            <option value="null" hidden>Versions</option>
+                            <option value="1.19.4">1.19.4</option>
+                        </select>
+                    </div>
+                </fieldset>
             </form>
         </div>
     </main>
 </body>
+
 </html>

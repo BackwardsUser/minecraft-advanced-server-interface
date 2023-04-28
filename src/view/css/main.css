@@ -96,3 +96,20 @@ a:hover {
 #createServerPanel {
     display: none;
 }
+
+.createServerPanel {
+    width: 50%;
+    background-color: #cacaca;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs * {
+    width: 25%;
+    margin: 0.5em auto;
+}
