@@ -1,6 +1,6 @@
 {
   "name": "minecraft-advanced-server-interface",
-  "version": "0.0.0",
+  "version": "1.1.1",
   "description": "A tool used to create, maintain, moderate and run a Minecraft Server.",
   "main": "./src/index.js",
   "scripts": {
