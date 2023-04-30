@@ -29,15 +29,16 @@
 
 header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     background-color: #aaaaaa;
     user-select: none;
     -webkit-user-select: none;
     -webkit-app-region: drag;
     justify-content: space-between;
-    height: max-content;
-    padding: 0.5em 0.5em;
+    height: 3em;
+}
+
+header h2 {
+    padding: 0 0.5em;
 }
 
 nav {
@@ -89,8 +90,26 @@ a:hover {
 }
 
 .controls button {
+    -webkit-app-region: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
     height: 100%;
-    padding: 0.5em;
+    aspect-ratio: 1/1;
+    margin: 0;
+    gap: 0;
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.controls #min:hover, .controls #max:hover {
+    background-color: #8a8a8a;
+}
+
+.controls #close:hover {
+    background-color: #853232;
+    color: #cacaca;
 }
 
 #createServerPanel {

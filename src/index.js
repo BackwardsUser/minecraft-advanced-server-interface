@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const { join } = require("node:path");
 
 let MainWindow;
@@ -30,3 +30,23 @@ app.once("ready", () => {
 
     MainWindow.loadFile(join(__dirname, "view", "html", "main.html"));
 });
+
+ipcMain.on("MASI:APPLICATION", (e, data) => {
+    if (data == "close") {
+        console.clear();
+        MainWindow.close();
+        app.quit();
+        process.exit();
+    } else if (data == "min") {
+        MainWindow.minimize();
+    } else if (data == "max") {
+        console.log(MainWindow.isMaximized())
+        if (MainWindow.isMaximized()) {
+            MainWindow.unmaximize();
+        } else {
+            MainWindow.maximize();
+        }
+    } else {
+        console.error(`Unknown "${data}".`)
+    }
+})

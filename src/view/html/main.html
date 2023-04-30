@@ -10,6 +10,7 @@
     <script src="../js/horizontalScrolling.js" defer></script>
     <script src="../js/getServers.js" defer></script>
     <script src="../js/createServer.js" defer></script>
+    <script src="../js/controls.js" defer></script>
     <title>Main</title>
 </head>
 
@@ -17,9 +18,9 @@
     <header>
         <h2>Backwards' MASI</h2>
         <div class="controls">
-            <button id="min">&minus;</button>
-            <button id="max">&square;</button>
-            <button id="close">&times;</button>
+            <button id="min" onclick="controller(this)">&minus;</button>
+            <button id="max" onclick="controller(this)">&square;</button>
+            <button id="close" onclick="controller(this)">&times;</button>
         </div>
     </header>
     <nav class="inline" id="H-Scroll">
