@@ -30,12 +30,14 @@
     </nav>
     <main>
         <div id="createServerPanel" class="createServerPanel">
+            <button id="closeServerPanel">&times;</button>
             <form action="createServer" class="createServerForm" method="POST">
                 <h3>Create Server</h3>
                 <fieldset>
                     <legend>Server Options</legend>
                     <div class="inputs">
                         <input type="text" placeholder="Server Name" required>
+                        <input type="number" placeholder="Port">
                         <select name="Versions" id="versions" required>
                             <option value="null" hidden>Versions</option>
                             <option value="1.19.4">1.19.4</option>
