@@ -1,0 +1,8 @@
+{
+    "FileOptions": {
+        "jarFileNames": [
+            "server",
+            "minecraft_server"
+        ]
+    }
+}

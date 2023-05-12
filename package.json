@@ -1,0 +1,31 @@
+{
+  "name": "minecraft-advanced-server-interface",
+  "version": "1.2.0",
+  "description": "A tool used to create, maintain, moderate and run a Minecraft Server.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BackwardsUser/minecraft-advanced-server-interface.git"
+  },
+  "keywords": [
+    "Minecraft",
+    "Server",
+    "Interface"
+  ],
+  "author": "Backwards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BackwardsUser/minecraft-advanced-server-interface/issues"
+  },
+  "homepage": "https://github.com/BackwardsUser/minecraft-advanced-server-interface#readme",
+  "dependencies": {
+    "electron": "^24.1.2",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

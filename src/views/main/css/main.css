@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    overflow-y: hidden;
+}
+
+*::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+    background: #cacaca;
+    /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 2px solid #cacaca;
+    /* creates padding around scroll thumb */
+}
+
+header {
+    display: flex;
+    background-color: #aaaaaa;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    justify-content: space-between;
+    height: 3em;
+}
+
+header h2 {
+    padding: 0 0.5em;
+}
+
+nav {
+    position: sticky;
+    background-color: #bababa;
+    padding: 0.5em 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+nav * {
+    flex-shrink: 0;
+}
+
+nav a {
+    width: max-content;
+}
+
+#nav-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+#nav-ul li {
+    width: fit-content;
+    display: inline;
+    list-style-type: none;
+    margin: 0 1em;
+    width: max-content;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bottom {
+    box-shadow: 0 0 1em #aaaaaa;
+}
+
+.controls {
+    height: 100%;
+}
+
+.controls button {
+    -webkit-app-region: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0;
+    gap: 0;
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.controls #min:hover, .controls #max:hover {
+    background-color: #8a8a8a;
+}
+
+.controls #close:hover {
+    background-color: #853232;
+    color: #cacaca;
+}
+
+#createServerPanel {
+    display: none;
+}
+
+.createServerPanel {
+    width: 50%;
+    background-color: #cacaca;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs * {
+    width: 25%;
+    margin: 0.5em auto;
+}
