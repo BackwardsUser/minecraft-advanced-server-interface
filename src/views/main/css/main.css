@@ -39,6 +39,7 @@ header {
 
 header h2 {
     padding: 0 0.5em;
+    margin: auto 0;
 }
 
 nav {
