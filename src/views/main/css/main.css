@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
+
+:root {
+    --text: #fff;
+    --background: #1a1a1a;
+    --hover-effect: #212121;
+    --primary-btn: #482b73;
+    --secondary-btn: #f2f2f2;
+    --accent: #5900ff;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,45 +21,47 @@
 *::-webkit-scrollbar {
     height: 8px;
     width: 8px;
-    /* width of the entire scrollbar */
 }
 
 *::-webkit-scrollbar-track {
-    background: #cacaca;
-    /* color of the tracking area */
+    background: var(--background);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #8a8a8a;
-    /* color of the scroll thumb */
+    background-color: var(--accent);
     border-radius: 20px;
-    /* roundness of the scroll thumb */
-    border: 2px solid #cacaca;
-    /* creates padding around scroll thumb */
+    border: 3.5px solid var(--background);
+}
+
+body {
+    background-color: var(--background);
 }
 
 header {
     display: flex;
-    background-color: #aaaaaa;
+    background-color: transparent;
     user-select: none;
     -webkit-user-select: none;
     -webkit-app-region: drag;
     justify-content: space-between;
-    height: 3em;
+    height: 2em;
+    color: var(--text);
 }
 
-header h2 {
+header p {
     padding: 0 0.5em;
     margin: auto 0;
 }
 
 nav {
     position: sticky;
-    background-color: #bababa;
-    padding: 0.5em 0.5em;
+    color: var(--text);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    border-bottom: 2px outset var(--accent);
+    border-top: 1px outset var(--accent);
 }
 
 nav * {
@@ -64,36 +77,51 @@ nav a {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-y: auto;
+    margin: auto;
 }
 
 #nav-ul li {
-    width: fit-content;
     display: inline;
     list-style-type: none;
-    margin: 0 1em;
+    padding: auto;
+    margin: 0 0.25em;
     width: max-content;
+    padding: 0.5em 0.75em;
 }
 
-a {
+.server {
+    padding: auto;
+}
+
+#createServer {
+    position: sticky;
+    left: 0;
+    padding: 0.5em;
+    background-color: var(--background);
+}
+
+#createServer:hover {
+    background-color: var(--hover-effect);
+}
+
+.nav-item {
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.bottom {
-    box-shadow: 0 0 1em #aaaaaa;
+.nav-item:hover {
+    background-color: var(--hover-effect);
 }
 
 .controls {
     height: 100%;
+    color: var(--text);
 }
 
 .controls button {
     -webkit-app-region: none;
     font-size: 1.5em;
-    font-weight: bold;
     border: none;
     background-color: transparent;
     height: 100%;
@@ -102,15 +130,20 @@ a:hover {
     gap: 0;
     transition-duration: 250ms;
     cursor: pointer;
+    color: var(--text);
+}
+
+.controls #max {
+    line-height: -200px;
 }
 
 .controls #min:hover, .controls #max:hover {
-    background-color: #8a8a8a;
+    background-color: var(--primary-btn);
 }
 
 .controls #close:hover {
     background-color: #853232;
-    color: #cacaca;
+    color: var(--background);
 }
 
 #createServerPanel {
@@ -119,9 +152,12 @@ a:hover {
 
 .createServerPanel {
     width: 50%;
-    background-color: #cacaca;
-    margin: auto;
-    margin-top: 1em;
+    background-color: var(--background);
+    padding: 20px;
+    border-radius: 0 0 10px 0;
+    color: var(--text);
+    border-bottom: 1px outset var(--accent);
+    border-right: 1px outset var(--accent);
 }
 
 .inputs {

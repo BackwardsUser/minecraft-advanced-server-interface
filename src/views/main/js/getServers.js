@@ -12,8 +12,27 @@ function createNavItem(serverName, nav) {
     const a = document.createElement("a");
     li.appendChild(a);
     a.text = serverName;
+    li.classList.add("nav-item", "server")
     nav.appendChild(li);
 }
+
+// a = [
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName",
+//     "ServerName"
+// ]
+
+// a.forEach(b => {
+//     createNavItem(b, nav_ul);
+// });
 
 for (var file of files) {
     if (!lstatSync(ServersDir + `/${file}`).isDirectory()) {

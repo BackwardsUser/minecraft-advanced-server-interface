@@ -1,10 +1,9 @@
 const serverCreator = document.getElementById("createServer");
 
-var createPanelStatus = false
-
 serverCreator.addEventListener("click", () => {
-    if (!createPanelStatus) {
-        createPanelStatus = true
+    if (document.getElementById("createServerPanel").style.display == "block") {
+        document.getElementById("createServerPanel").style.display = "";
+    } else {
         document.getElementById("createServerPanel").style.display = "block"
     }
 })
