@@ -16,23 +16,23 @@ function createNavItem(serverName, nav) {
     nav.appendChild(li);
 }
 
-// a = [
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName",
-//     "ServerName"
-// ]
+a = [
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName"
+]
 
-// a.forEach(b => {
-//     createNavItem(b, nav_ul);
-// });
+a.forEach(b => {
+    createNavItem(b, nav_ul);
+});
 
 for (var file of files) {
     if (!lstatSync(ServersDir + `/${file}`).isDirectory()) {

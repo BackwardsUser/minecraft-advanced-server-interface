@@ -1,9 +1,13 @@
 const serverCreator = document.getElementById("createServer");
 
+var open = false;
+
 serverCreator.addEventListener("click", () => {
-    if (document.getElementById("createServerPanel").style.display == "block") {
-        document.getElementById("createServerPanel").style.display = "";
+    if (open) {
+        open = !open;
+        document.getElementById("createServerPanel").classList.remove("open");
     } else {
-        document.getElementById("createServerPanel").style.display = "block"
+        open = !open;
+        document.getElementById("createServerPanel").classList.add("open");
     }
 })

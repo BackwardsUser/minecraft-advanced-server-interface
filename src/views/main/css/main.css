@@ -33,6 +33,10 @@
     border: 3.5px solid var(--background);
 }
 
+*::-webkit-scrollbar-thumb:active {
+    border: 2.5px solid var(--background);
+}
+
 body {
     background-color: var(--background);
 }
@@ -146,10 +150,6 @@ nav a {
     color: var(--background);
 }
 
-#createServerPanel {
-    display: none;
-}
-
 .createServerPanel {
     width: 50%;
     background-color: var(--background);
@@ -158,14 +158,21 @@ nav a {
     color: var(--text);
     border-bottom: 1px outset var(--accent);
     border-right: 1px outset var(--accent);
+    transform: translateY(-200px);
+    transition-duration: 250ms;
+}
+
+.open {
+    transform: translateY(0px);
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
+    margin-top: 1em;
 }
 
 .inputs * {
     width: 25%;
-    margin: 0.5em auto;
+    margin: 0.5em 0.5em;
 }
