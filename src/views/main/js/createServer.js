@@ -19,4 +19,6 @@ function togglePanel() {
     }
 }
 
-serverCreator.addEventListener("click", togglePanel());
+serverCreator.addEventListener("click", () => {
+    togglePanel()
+});
