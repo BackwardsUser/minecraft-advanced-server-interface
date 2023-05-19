@@ -67,6 +67,7 @@ nav {
     flex-wrap: nowrap;
     border-bottom: 2px outset var(--accent);
     border-top: 1px outset var(--accent);
+    
 }
 
 nav * {

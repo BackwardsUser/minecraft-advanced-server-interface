@@ -41,7 +41,6 @@ ipcMain.on("MASI:APPLICATION", (e, data) => {
     } else if (data == "min") {
         MainWindow.minimize();
     } else if (data == "max") {
-        console.log(MainWindow.isMaximized())
         if (MainWindow.isMaximized()) {
             MainWindow.unmaximize();
         } else {
