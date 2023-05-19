@@ -20,7 +20,8 @@ app.once("ready", () => {
             contextIsolation: false,
             nodeIntegration: true
         },
-        width: 1200
+        width: 1200,
+        icon: join(__dirname, "assets", "icons", "bakies.ico")
     });
 
     MainWindow.once("closed", () => {

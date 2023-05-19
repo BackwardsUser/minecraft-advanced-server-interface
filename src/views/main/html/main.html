@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/imports.js"></script>
-    <script src="../js/getVersions.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/horizontalScrolling.js" defer></script>
     <script src="../js/getServers.js" defer></script>
     <script src="../js/createServer.js" defer></script>
@@ -17,15 +17,15 @@
 
 <body>
     <header>
-        <p>MASI</p>
+        <img src="../../../assets/icons/bakies.ico" alt="NA" class="header-img" id="header-img" onerror="appIconFailure(this)">
         <div class="controls">
-            <button id="min" onclick="controller(this)">&minus;</button>
-            <button id="max" onclick="controller(this)">&square;</button>
-            <button id="close" onclick="controller(this)">&times;</button>
+            <button tabindex="1" id="min" onclick="controller(this)">&minus;</button>
+            <button tabindex="2" id="max" onclick="controller(this)">&square;</button>
+            <button tabindex="3" id="close" onclick="controller(this)">&times;</button>
         </div>
     </header>
     <nav class="inline" id="H-Scroll">
-        <a id="createServer" class="nav-item">New Server</a>
+        <a tabindex="4" id="createServer" class="nav-item">New Server</a>
         <ul id="nav-ul">
         </ul>
     </nav>
@@ -36,9 +36,9 @@
                 <fieldset>
                     <legend>Server Options</legend>
                     <div class="inputs">
-                        <input type="text" placeholder="Server Name" required>
-                        <input type="number" placeholder="Port">
-                        <select name="Versions" id="versions" required>
+                        <input tabindex="-1" type="text" placeholder="Server Name" name="servername" id="servername" required>
+                        <input tabindex="-1" type="number" placeholder="Port" name="port" id="port">
+                        <select tabindex="-1" name="Versions" id="versions" required>
                         </select>
                     </div>
                 </fieldset>

@@ -16,7 +16,59 @@ function createNavItem(serverName, nav) {
     nav.appendChild(li);
 }
 
-a = [
+var example_servers = [
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
+    "ServerName",
     "ServerName",
     "ServerName",
     "ServerName",
@@ -30,9 +82,11 @@ a = [
     "ServerName"
 ]
 
-a.forEach(b => {
-    createNavItem(b, nav_ul);
-});
+if (env === "ex_server_test") {
+    example_servers.forEach(example_server => {
+        createNavItem(example_server, nav_ul);
+    });
+}
 
 for (var file of files) {
     if (!lstatSync(ServersDir + `/${file}`).isDirectory()) {

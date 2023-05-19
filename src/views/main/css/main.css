@@ -16,6 +16,7 @@
     padding: 0;
     font-family: "Rubik", sans-serif;
     overflow-y: hidden;
+    outline: none;
 }
 
 *::-webkit-scrollbar {
@@ -102,9 +103,12 @@ nav a {
     left: 0;
     padding: 0.5em;
     background-color: var(--background);
+    box-shadow: 1px 1px 1em var(--background);
+    border-right: 1px solid var(--hover-effect);
+    border-bottom: 1px solid var(--hover-effect);
 }
 
-#createServer:hover {
+#createServer:hover, #createServer:focus {
     background-color: var(--hover-effect);
 }
 
@@ -137,15 +141,16 @@ nav a {
     color: var(--text);
 }
 
+
 .controls #max {
     line-height: -200px;
 }
 
-.controls #min:hover, .controls #max:hover {
+.controls #min:hover, .controls #max:hover, .controls #min:focus, .controls #max:focus {
     background-color: var(--primary-btn);
 }
 
-.controls #close:hover {
+.controls #close:hover, .controls #close:focus {
     background-color: #853232;
     color: var(--background);
 }
@@ -169,10 +174,14 @@ nav a {
 .inputs {
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
 }
 
 .inputs * {
     width: 25%;
     margin: 0.5em 0.5em;
+}
+
+.header-img {
+    padding: 2px;
+    border-radius: 50%;
 }
