@@ -2,7 +2,7 @@
 // production
 // development
 // ex_server_test
-const env = "ex_server_test"
+const env = "development"
 
 // Imports
 const { readdirSync, mkdirSync, lstatSync, rmSync } = require("node:fs");
