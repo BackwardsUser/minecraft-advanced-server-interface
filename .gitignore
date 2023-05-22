@@ -1,2 +1,7 @@
 node_modules
 Servers
+
+# Ignore these
+tsconfig.json
+*.ts
+*.old

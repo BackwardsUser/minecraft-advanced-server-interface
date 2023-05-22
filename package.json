@@ -23,6 +23,7 @@
   "homepage": "https://github.com/BackwardsUser/minecraft-advanced-server-interface#readme",
   "dependencies": {
     "electron": "^24.1.2",
+    "typescript": "^5.0.4",
     "websocket": "^1.0.34"
   },
   "devDependencies": {
