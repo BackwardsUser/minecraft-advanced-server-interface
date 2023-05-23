@@ -1,7 +1,9 @@
 node_modules
 Servers
 
-# Ignore these
+# Used Typescript to better understand what I was writing
 tsconfig.json
 *.ts
+
+# For outdated files that may be useful in the future.
 *.old

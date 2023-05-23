@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/imports.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/deferedMain.js" defer></script>
     <script src="../js/getVersions.js"></script>
     <script src="../js/horizontalScrolling.js" defer></script>
     <script src="../js/getServers.js" defer></script>
@@ -32,7 +33,7 @@
     </nav>
     <main>
         <div id="createServerPanel" class="createServerPanel">
-            <form action="createServer" class="createServerForm" method="POST">
+            <form class="createServerForm" id="serverCreator">
                 <h3>Create Server</h3>
                 <fieldset>
                     <legend>Server Options</legend>
@@ -42,6 +43,7 @@
                         <select tabindex="-1" name="Versions" id="versions" required>
                             <option value="null" hidden selected>Version</option>
                         </select>
+                        <button type="submit" id="createServerSubmit">Create Server</button>
                     </div>
                 </fieldset>
             </form>

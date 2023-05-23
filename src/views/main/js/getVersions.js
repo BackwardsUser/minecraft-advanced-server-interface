@@ -26,7 +26,14 @@ function createVersionItem(versions) {
         versions_select.appendChild(branch_separator);
         branch.versions.forEach(function (version) {
             var version_opt = document.createElement("option");
-            version_opt.innerText = version;
+
+            var splitVersion = version.split(".");
+            if (splitVersion[splitVersion.length-1] == "0") {
+                splitVersion.pop();
+            }
+            
+            version_opt.innerText = splitVersion.join(".");
+            version_opt.value = version
             branch_separator.appendChild(version_opt);
         });
     });

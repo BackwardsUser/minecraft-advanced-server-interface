@@ -1,6 +1,3 @@
-// Imports
-const { ipcRenderer } = require("electron")
-
 /**
  * Application Controls Handler
  * @BackwardsUser

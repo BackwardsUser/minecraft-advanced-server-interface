@@ -83,7 +83,7 @@ nav a {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-y: auto;
-    margin: auto;
+    margin: auto 0;
 }
 
 #nav-ul li {
@@ -164,7 +164,7 @@ nav a {
     color: var(--text);
     border-bottom: 1px outset var(--accent);
     border-right: 1px outset var(--accent);
-    transform: translateY(-200px);
+    transform: translateY(-240px);
     transition-duration: 250ms;
 }
 
